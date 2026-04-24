@@ -23,7 +23,7 @@ if st.button("Run"):
     else:
         lat, lon = loc.latitude, loc.longitude
 
-        st.write("### Result")
+        st.write("### Results")
 
         bearings = [45, 180, 300]
 
@@ -32,6 +32,5 @@ if st.button("Run"):
 
             st.write({
                 "zone": i+1,
-                "coordinates": (new_lat, new_lon),
-                "confidence": "basic"
+                "coordinates": (round(new_lat, 5), round(new_lon, 5))
             })
